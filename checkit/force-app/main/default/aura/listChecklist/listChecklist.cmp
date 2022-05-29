@@ -1,0 +1,10 @@
+<!--
+  @description  : 
+  @author       : NTeli LLC
+  Modifications Log 
+  Ver   Date         Author      Modification
+  1.0   04-03-2021   NTeli LLC   Initial Version
+-->
+<aura:component implements="force:lightningQuickAction,force:hasRecordId,flexipage:availableForAllPageTypes">
+	<c:checkIt recordId="{!v.recordId}" />
+</aura:component>

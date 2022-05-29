@@ -1,0 +1,12 @@
+<!--
+  @description  : 
+  @author       : NTeli LLC
+  Modifications Log 
+  Ver   Date         Author      Modification
+  1.0   04-03-2021   NTeli LLC   Initial Version
+-->
+<aura:component implements="force:lightningQuickAction,force:hasRecordId,flexipage:availableForAllPageTypes">
+    <div class="slds-box slds-theme_default">
+        <c:checklist recordId="{!v.recordId}" />
+    </div>
+</aura:component>

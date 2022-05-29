@@ -1,0 +1,14 @@
+<!--
+  @description  : 
+  @author       : NTeli LLC
+  Modifications Log 
+  Ver   Date         Author      Modification
+  1.0   03-17-2021   NTeli LLC   Initial Version
+-->
+<template>
+    <lightning-card title="add product">
+        <lightning-input type="number" name="number1" label="Number1" value={number1} onchange={handleChange}></lightning-input>
+        <lightning-input type="number" name="number2" label="Number2" value={number2} onchange={handleChange}></lightning-input>
+        <p><lightning-button label="Add" title="Add" onclick={clickAdd} class="slds-m-left_x-small"></lightning-button></p>
+    </lightning-card>
+</template>

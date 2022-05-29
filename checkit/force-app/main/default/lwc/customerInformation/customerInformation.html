@@ -1,0 +1,51 @@
+<!--
+  @description  : 
+  @author       : NTeli LLC
+  Modifications Log 
+  Ver   Date         Author      Modification
+  1.0   05-26-2021   NTeli LLC   Initial Version
+-->
+<template>
+    {firstName} {lastName} {patientSurveyComplete}
+    <br/>
+    <lightning-combobox
+            name="combobox1"
+            label="Combo Box1"
+            value={combobox1Value}
+            placeholder="Select One"
+            options={combobox1Options}
+            onchange={handleCombobox1Change} 
+            required></lightning-combobox>
+
+    <p>Selected value is: {combobox1Value}</p>
+
+    <br/>
+
+    <lightning-checkbox-group name="checkbox1"
+                              label="Checkbox Group"
+                              options={checkbox1Options}
+                              value={checkbox1Value}
+                              onchange={handleCheckbox1Change}></lightning-checkbox-group>
+    <p>Selected Values are: {checkbox1Value}</p>
+
+    <br/>
+
+    <lightning-radio-group name="radioGroup"
+                          label="Radio Group"
+                          options={radiogroup1Options}
+                          value={radiogroup1Value}
+                          type="radio"
+                          onchange={handleRadiogroup1Change}></lightning-radio-group>
+    
+    <p>Selected Values is: {radiogroup1Value}</p>
+    <br/>
+
+    
+    <lightning-button variant="brand" label="Save" title="Save" onclick={handleSaveClick} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button variant="brand" label="Cancel" title="Cancel" onclick={handleCancelClick} class="slds-m-left_x-small"></lightning-button>
+    
+
+    <p>Selected Button is: {clickButtonLabel}</p>
+    <br/>
+
+</template>

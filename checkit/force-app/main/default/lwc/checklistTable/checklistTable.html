@@ -1,0 +1,34 @@
+<!--
+  @description  : 
+  @author       : NTeli LLC
+  Modifications Log 
+  Ver   Date         Author      Modification
+  1.0   04-04-2021   NTeli LLC   Initial Version
+-->
+<template>
+    <div class="slds-box slds-theme_default">
+        <template if:true={checklistItems.data}>
+            <table border="0">
+                <tr>
+                    <th>Checklist Item</th>
+                    <th>Response</th>
+                    <th>Exceptions/Comments</th>
+                </tr>
+                <template for:each={checklistItems.data} for:item="checklistItem">
+                    <tr key={checklistItem.Id}>
+                        <td style="vertical-align:top">{checklistItem.Checklist_Item_Text__c}</td>
+                        <td style="vertical-align:top">
+                            <select>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </td>
+                        <td style="vertical-align:top">
+                            <textarea rows="3" cols="20"></textarea>
+                        </td>
+                    </tr>
+                </template>
+            </table>
+        </template>
+    </div>
+</template>

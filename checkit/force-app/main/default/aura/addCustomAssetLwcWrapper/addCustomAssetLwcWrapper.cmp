@@ -1,0 +1,17 @@
+<!--
+  @description  : 
+  @author       : NTeli LLC
+  Modifications Log 
+  Ver   Date         Author      Modification
+  1.0   03-17-2021   NTeli LLC   Initial Version
+-->
+
+<aura:component implements="force:lightningQuickAction,force:hasRecordId,flexipage:availableForAllPageTypes">
+    <!--  this tag sets modal width -->
+    <aura:html tag="style">
+      .slds-modal__container {
+      min-width: 90vw;
+      }
+    </aura:html>
+    <c:addCustomAsset recordId="{!v.recordId}" onclose="{!c.closeQA}" onrefresh="{!c.refresh}" />
+</aura:component>

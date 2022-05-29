@@ -1,0 +1,35 @@
+<!--
+  @description  : 
+  @author       : NTeli LLC
+  Modifications Log 
+  Ver   Date         Author      Modification
+  1.0   04-04-2021   NTeli LLC   Initial Version
+-->
+<template>
+    <div class="slds-box slds-theme_default">
+        <template if:true={checklistItems.data}>
+            <lightning-button variant="brand" label="Save" title="Save" onclick={handleSaveClick} class="slds-m-left_x-small"></lightning-button>
+            <div class="slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+                <template for:each={checklistItems.data} for:item="checklistItem">
+                    <lightning-layout multiple-rows key={checklistItem.Id}>
+                        <lightning-layout-item size="5" padding="small">
+                            <div class="custom-box slds-p-around_medium slds-text-align_center">
+                                {checklistItem.Checklist_Item_Text__c}
+                            </div>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="3" padding="small">
+                            <div class="custom-box slds-p-around_medium slds-text-align_center">
+                                <lightning-combobox data-id={checklistItem.Id} options={options}></lightning-combobox>
+                            </div>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" padding="small">
+                            <div class="custom-box slds-p-around_medium slds-text-align_center">
+                                <lightning-textarea data-id={checklistItem.Id} name="input3" placeholder="type here..."></lightning-textarea>
+                            </div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </template>
+            </div>
+        </template>
+    </div>
+</template>

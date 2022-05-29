@@ -1,0 +1,33 @@
+<!--
+  @description  : 
+  @author       : NTeli LLC
+  Modifications Log 
+  Ver   Date         Author      Modification
+  1.0   03-22-2021   NTeli LLC   Initial Version
+-->
+<template>
+    <lightning-record-edit-form record-id={recordId} object-api-name="Quote">
+        <div class="slds-grid slds-gutters">
+            
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-messages>
+                </lightning-messages>
+                <lightning-output-field field-name="QuoteNumber">
+                </lightning-output-field>
+                <lightning-input-field field-name="Name">
+                </lightning-input-field>
+                <lightning-input-field field-name="ContactId">
+                </lightning-input-field>
+                <lightning-button
+                    class="slds-m-top_small"
+                    variant="brand"
+                    type="submit"
+                    name="update"
+                    label="Save">
+                </lightning-button>
+            </div>
+            
+        </div>
+        
+    </lightning-record-edit-form>
+</template>

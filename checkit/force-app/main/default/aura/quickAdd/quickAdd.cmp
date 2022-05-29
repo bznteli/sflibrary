@@ -1,0 +1,13 @@
+<!--
+  @description  : 
+  @author       : NTeli LLC
+  Modifications Log 
+  Ver   Date         Author   Modification
+  1.0   03-17-2021   PWC   Initial Version
+-->
+<aura:component implements="force:lightningQuickAction">
+    <lightning:input type="number" name="myNumber1" aura:id="num1" label="Number1" step="0.01"/> + 
+    <lightning:input type="number" name="myNumber2" aura:id="num2" label="Number2" step="0.01"/>
+
+    <lightning:button label="Add" onclick="{!c.clickAdd}"/>
+</aura:component>

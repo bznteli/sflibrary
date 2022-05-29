@@ -1,0 +1,26 @@
+<!--
+  @description  : 
+  @author       : NTeli LLC
+  Modifications Log 
+  Ver   Date         Author      Modification
+  1.0   03-17-2021   NTeli LLC   Initial Version
+-->
+<template>
+    <lightning-card title="add product">
+        <lightning-input name="productName" value={productName} onchange={handleChange}></lightning-input>
+        <lightning-button label="Search" title="Search" onclick={handleSearchClick} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button label="Add" title="Add" onclick={handleAddClick} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+    <div style="height: 300px;">
+        <template if:true={customAssets.data}>
+            <lightning-datatable 
+                key-field="Id" 
+                data={customAssets.data}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+        <template if:true={customAssets.error}>
+            Error in getting data
+        </template>
+    </div>
+</template>

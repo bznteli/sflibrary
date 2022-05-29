@@ -1,0 +1,10 @@
+<!--
+  @description  : 
+  @author       : NTeli LLC
+  Modifications Log 
+  Ver   Date         Author      Modification
+  1.0   03-22-2021   NTeli LLC   Initial Version
+-->
+<aura:component>
+    <c:editQuote recordId="{!v.recordId}" />
+</aura:component>
